@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import Link from './Link';
 
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
+
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -30,4 +34,6 @@ root.render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
+
+serviceWorkerRegistration.register();
 
