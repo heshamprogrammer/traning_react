@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./comp/Header";
+import Footer from "./comp/Footer";
+import Main from "./comp/Main";
+import img1 from "./comp/image/github-photo.jpg";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HelmetProvider>
+        <Helmet>
+          <title>App Page</title>
+        </Helmet>
+      </HelmetProvider>
+      <Header />
+      <main className="main">
+        <Main
+          logo={img1}
+          title="hesham"
+          desc="my name is hesham, frontend developer and software engneer"
+        />
+        <Main
+          logo={img1}
+          title="hesham"
+          desc="my name is hesham, frontend developer and software engneer"
+        />
+        <Main
+          logo={img1}
+          title="hesham"
+          desc="my name is hesham, frontend developer and software engneer"
+        />
+        <Main
+          logo={img1}
+          title="hesham"
+          desc="my name is hesham, frontend developer and software engneer"
+        />
+        <Main
+          logo={img1}
+          title="hesham"
+          desc="my name is hesham, frontend developer and software engneer"
+        />
+      </main>
+      <Footer />
     </div>
   );
 }
